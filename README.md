@@ -6,7 +6,7 @@ This project focuses on classifying images of clothing into 10 different categor
 
 The Neural Network Fashion Classification project aims to build classification models for clothing items and handwritten digits using deep learning techniques. The project is divided into three parts:
 
-### Part 1: Neural Network Implementation using NumPy
+## Part 1: Neural Network Implementation using NumPy
 
 In this section, a neural network is implemented from scratch using NumPy to classify the MNIST dataset. The MNIST dataset (Modified National Institute of Standards and Technology database) contains a training set of 60,000 images and a test set of 10,000 images of handwritten digits (0-9). The implementation focuses on the core mechanics of neural networks, including forward propagation, loss calculation, and backpropagation. 
 
@@ -42,9 +42,39 @@ We utilize **Stochastic Gradient Descent (SGD)** as the optimizer for updating t
 The model evaluates accuracy on a validation set. The accuracy is calculated based on the proportion of correctly predicted classes compared to the total number of samples in the validation dataset.
 
 
-### Part 3: Convolutional Neural Network (CNN) Implementation
+## Part 3: Convolutional Neural Network (CNN) Implementation
 
-In this section, a Convolutional Neural Network (CNN) is implemented using PyTorch to enhance classification accuracy by leveraging spatial hierarchies in images. The CNN model also evaluates accuracy on a validation set and calculates training and validation losses for performance monitoring.
+In this part of the project, we implement two different Convolutional Neural Network (CNN) architectures using PyTorch to classify images from the Fashion-MNIST dataset. Both architectures leverage convolutional layers, ReLU activation, and max pooling to enhance the model's ability to learn spatial hierarchies from images.
+
+### CNN Architecture 1
+
+The first CNN architecture consists of the following layers:
+
+1. **Convolutional Layers**: Convolves the input image with a set of filters.
+2. **ReLU Activation**: Applies the ReLU activation function to introduce non-linearity.
+3. **Max Pooling Layers**: Reduces the spatial dimensions of the feature maps, maintaining the most significant features.
+   
+### Optimizer
+
+We utilize **Stochastic Gradient Descent (SGD)** as the optimizer for updating the weights of the neural network. SGD is chosen for its simplicity and effectiveness in optimizing neural network parameters.
+
+### CNN Architecture 2
+
+The second CNN architecture builds upon the first by incorporating additional components to improve performance:
+
+1. **Convolutional Layesr**: Similar to Architecture 1, it convolves the input image with filters.
+2. **ReLU Activation**: Non-linearity is introduced using the ReLU function.
+3. **Max Pooling Layers**: Reduces the feature map dimensions.
+4. **Batch Normalization**: Normalizes the outputs of the previous layer to stabilize and accelerate training.
+5. **Dropout**: A regularization technique that randomly sets a fraction of the input units to zero during training to prevent overfitting.
+
+### Optimizer
+
+For the second CNN architecture, we use the **Adam optimizer**, known for its efficiency in training deep learning models. It adjusts the learning rate based on the first and second moments of the gradients, resulting in faster convergence.
+
+### Summary
+
+In this part, we implement two CNN architectures for classifying clothing images from the Fashion-MNIST dataset. The first architecture establishes a foundational model, while the second architecture enhances performance through the addition of batch normalization, dropout, and the Adam optimizer. These improvements aim to increase the model's robustness and accuracy on the validation set.
 
 ## Installation
 
