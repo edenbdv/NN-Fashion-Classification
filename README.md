@@ -2,34 +2,49 @@
 
 This project focuses on classifying images of clothing into 10 different categories using Neural Networks. The classification is performed using the Fashion-MNIST dataset, which consists of 70,000 grayscale images of clothing items.
 
-## Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Part 1: Implement Neural Network using NumPy](#part-1-implement-neural-network-using-numpy)
-3. [Part 2: Implement Neural Network in PyTorch](#part-2-implement-neural-network-in-pytorch)
-4. [Part 3: Implement Convolutional Neural Network (CNN)](#part-3-implement-convolutional-neural-network-cnn)
-5. [Installation](#installation)
-6. [Usage](#usage)
-7. [Contributions](#contributions)
-8. [License](#license)
-
 ## Project Overview
 
-The NN Fashion Classification project aims to build a robust classification model for clothing items using deep learning techniques. The project is divided into three parts:
+The Neural Network Fashion Classification project aims to build classification models for clothing items and handwritten digits using deep learning techniques. The project is divided into three parts:
 
-### Part 1: Implement Neural Network using NumPy
+### Part 1: Neural Network Implementation using NumPy
 
-In this section, a simple neural network is implemented from scratch using NumPy. The focus is on understanding the core mechanics of neural networks, including forward propagation, loss calculation, and backpropagation.
+In this section, a neural network is implemented from scratch using NumPy to classify the MNIST dataset. The MNIST dataset (Modified National Institute of Standards and Technology database) contains a training set of 60,000 images and a test set of 10,000 images of handwritten digits (0-9). The implementation focuses on the core mechanics of neural networks, including forward propagation, loss calculation, and backpropagation. 
 
-### Part 2: Implement Neural Network in PyTorch
+- **Activation Function**: The sigmoid function is used as the activation function in the hidden layer and output layer of the network.
+- **Loss Function**: The negative log likelihood is used as the loss function, which helps measure the performance of the classification model. 
 
-This part involves using PyTorch to create a multilayer perceptron (MLP) for classifying the Fashion-MNIST dataset. PyTorch’s dynamic computation graph simplifies the implementation and provides a more flexible framework for building complex models.
-<img width="432" alt="bag" src="https://github.com/user-attachments/assets/08d2c408-93aa-4f80-a8e0-b3ed56cd09a1">
-<img width="645" alt="‏‏loss" src="https://github.com/user-attachments/assets/58ba2736-6689-48b3-adb5-82fd736e7fc2">
+The model evaluates accuracy on a validation set.
 
-### Part 3: Implement Convolutional Neural Network (CNN)
 
-In this final part, a Convolutional Neural Network (CNN) is implemented in PyTorch to improve classification accuracy by leveraging spatial hierarchies in images.
+## Part 2: Neural Network Implementation in PyTorch
+
+In this part of the project, we implement a neural network using PyTorch to classify images from the Fashion-MNIST dataset. This dataset consists of 70,000 grayscale images of clothing items categorized into 10 classes.
+
+### Network Architecture
+
+The architecture of the neural network is as follows:
+
+- **Input Layer**: 784 input units (28x28 pixel images flattened into vectors)
+- **Hidden Layer 1**: 128 units with ReLU activation
+- **Hidden Layer 2**: 64 units with ReLU activation
+- **Output Layer**: 10 units with log-softmax activation, providing class probabilities for each clothing category
+
+### Loss Function
+
+The model uses the **Negative Log Likelihood Loss** as the loss function. This loss function is suitable for multi-class classification tasks, as it measures the performance of the output probabilities against the true labels.
+
+### Optimizer
+
+We utilize **Stochastic Gradient Descent (SGD)** as the optimizer for updating the weights of the neural network. SGD is chosen for its simplicity and effectiveness in optimizing neural network parameters.
+
+### Accuracy Evaluation
+
+The model evaluates accuracy on a validation set. The accuracy is calculated based on the proportion of correctly predicted classes compared to the total number of samples in the validation dataset.
+
+
+### Part 3: Convolutional Neural Network (CNN) Implementation
+
+In this section, a Convolutional Neural Network (CNN) is implemented using PyTorch to enhance classification accuracy by leveraging spatial hierarchies in images. The CNN model also evaluates accuracy on a validation set and calculates training and validation losses for performance monitoring.
 
 ## Installation
 
