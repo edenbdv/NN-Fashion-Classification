@@ -19,7 +19,9 @@ The model evaluates accuracy on a validation set.
 ## Part 2: Neural Network Implementation in PyTorch
 
 In this part of the project, we implement a neural network using PyTorch to classify images from the Fashion-MNIST dataset. This dataset consists of 70,000 grayscale images of clothing items categorized into 10 classes.
+
 <img width="432" alt="bag" src="https://github.com/user-attachments/assets/6ce3543c-2b52-4fa5-926a-3e4b6f34b9df">
+
 <img width="645" alt="‏‏loss" src="https://github.com/user-attachments/assets/34f09f6d-57d8-4aad-b1e2-fb4c72f29e62">
 
 ### Network Architecture
