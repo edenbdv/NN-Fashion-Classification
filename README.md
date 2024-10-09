@@ -1,6 +1,6 @@
 # NN Fashion Classification
 
-This project focuses on classifying images of clothing into 10 different categories using three different Neural Networks. The classification is performed using the Fashion-MNIST dataset, which consists of 70,000 grayscale images of clothing items.
+This project focuses on classifying images of clothing into 10 different categories using three different Neural Networks, specifically a multilayer perceptron and convolutional neural networks (CNNs). The classification is performed using the Fashion-MNIST dataset, which consists of 70,000 grayscale images of clothing items.
 
 ## Project Overview
 
